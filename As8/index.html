@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(156, 177, 197);
+            perspective: 700px;
+            overflow: hidden;
+        }
+
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            min-height: 70%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            border-radius: 25px;
+            box-shadow: -5px 1px 10px rgb(240, 236, 236), 5px 5px 10px rgb(239, 236, 236);
+            justify-content: center;
+            transform: rotateX(10deg);
+        }
+
+        .inputs {
+
+            width: 90%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .first {
+
+            min-height: 50px;
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            width: 80%;
+            margin: 5px;
+        }
+
+
+        .first input {
+            width: 90%;
+            height: 25px;
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            background: rgb(188, 206, 223);
+            border-radius: 10px;
+        }
+
+        label {
+            margin: 10px 5px;
+        }
+
+        .btn {
+            border: none;
+            height: 30px;
+            border-radius: 30px;
+            background-color: rgb(169, 193, 214);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: beige;
+            z-index: -1;
+            transition: .4s;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background-color: beige;
+            z-index: -1;
+            transition: .4s;
+
+        }
+
+        .btn:hover::after,
+        .btn:hover::before {
+            width: 50%;
+        }
+        ul{
+            background-color: aqua;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Assignment 8</h1>
+    <div class="container">
+        <div class="inputs">
+            <div class="first">
+                <label for="">Enter Your Limit</label>
+                <input type="number" name="" placeholder="Number" id="n1">
+            </div>
+            <div  class="first" style="border-radius:10px;">
+                sum of odd Numbers is:<span id="output"></span>
+                <button class="btn" onclick="find()">find
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
